@@ -1,0 +1,10 @@
+if [ "$PROFILE_INCLUDED" != "" ]; then
+  return
+fi
+
+export PROFILE_INCLUDED=1
+
+for file in `ls ~/.profile.d/*.conf`; do
+  file=`basename $file`
+  source ~/.profile.d/$file
+done
