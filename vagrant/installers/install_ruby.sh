@@ -18,7 +18,7 @@ sudo tar -xzvf chruby-0.3.9.tar.gz
 cd chruby-0.3.9/
 sudo make install
 
-ruby-install ruby 2.3.1
+ruby-install ruby 2.4
 
 if [ "$CHRUBY_VERSION"]; then
   echo '' > /dev/null
@@ -27,7 +27,7 @@ else
     source /usr/local/share/chruby/chruby.sh
     source /usr/local/share/chruby/auto.sh
 
-    chruby 2.3.1
+    chruby 2.4
     gem source -a http://gems.xing.com
     gem install bundler
   fi
