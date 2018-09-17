@@ -18,6 +18,11 @@ Vagrant.configure("2") do |config|
   config.vm.hostname = "ruby-vagrant.dev"
   config.ssh.forward_agent = true
 
+  config.vm.provider "virtualbox" do |vb|
+    vb.memory = (4 * 1024).to_s
+    vb.gui = true
+  end
+
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
   # `vagrant box outdated`. This is not recommended.
